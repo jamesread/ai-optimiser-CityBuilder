@@ -1,4 +1,4 @@
-pharaohLayout
+eaPharaohLayout
 =============
 
 ![Pharaoh Layout](https://raw.githubusercontent.com/jamesread/pharaohLayout/master/doc/pharaohLayout1.png "Pharaoh Layout"")
