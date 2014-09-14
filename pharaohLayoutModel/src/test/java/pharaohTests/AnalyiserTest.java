@@ -1,7 +1,6 @@
 package pharaohTests;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import pharaohLayoutModel.Map;
@@ -10,10 +9,10 @@ import pharaohLayoutModel.analyser.Analyser;
 import pharaohLayoutModel.buildings.Bazar;
 import pharaohLayoutModel.buildings.Courthouse;
 import pharaohLayoutModel.buildings.House;
+import pharaohLayoutModel.buildings.House.HouseLevel;
 import pharaohLayoutModel.buildings.PoliceStation;
 import pharaohLayoutModel.buildings.Temple;
 import pharaohLayoutModel.buildings.WaterCarrier;
-import pharaohLayoutModel.buildings.House.HouseLevel;
 import pharaohLayoutModel.renderer.MapRenderer;
 import pharaohLayoutModel.renderer.WindowRenderMap;
 
