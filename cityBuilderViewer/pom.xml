@@ -13,7 +13,33 @@
           <source>11</source>
           <target>11</target>
         </configuration>
-      </plugin>
+	</plugin>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<finalName>cbgaview</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef> 
+					</descriptorRefs>
+							<archive>
+								<manifest>  
+									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+									<addClasspath>true</addClasspath>
+									<mainClass>cityBuilderViewer.Main</mainClass>
+								</manifest>
+							</archive>
+				</configuration>
+			</plugin>
     </plugins>
   </build>
   <dependencies> 
