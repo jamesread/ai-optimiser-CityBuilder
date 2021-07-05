@@ -4,8 +4,8 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 
 import cityBuilderModel.Map;
-import cityBuilderViewer.renderer.WindowRenderMap;
 import cityBuilderGa.Args;
+import cityBuilderGa.NetworkSender;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
@@ -52,14 +52,7 @@ public class Main {
 
 		int generation = 0;
 
-		WindowRenderMap wnd = null;
-
-		if (!Args.headless) {
-			wnd = new WindowRenderMap(fittest);
-			wnd.setVisible(true);
-			wnd.setLocation(100, 1000);
-			wnd.getRenderer().shouldFakeIsomorphic = false;
-		}
+		NetworkSender sender = new NetworkSender();
 
 		while (true) {
 			generation++;
@@ -73,11 +66,7 @@ public class Main {
 				System.out.println("geneartion:" + generation);
 				System.out.println("rank: " + nextEvolutionFittestRating);
 
-				if (!Args.headless) {
-					wnd.getRenderer().setMap(fittest);
-					wnd.setTitle("rating: " + nextEvolutionFittestRating);
-					wnd.getRenderer().repaint();
-				}
+				sender.send(nextEvolution.toString());
 			}
 		}
 	}
