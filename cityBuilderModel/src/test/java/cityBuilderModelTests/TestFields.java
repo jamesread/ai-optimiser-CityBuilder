@@ -10,7 +10,6 @@ import cityBuilderModel.Map.Cell;
 import cityBuilderModel.Map.MapCoordException;
 import cityBuilderModel.analyser.Analyser;
 import cityBuilderModel.buildings.Bazar;
-import cityBuilderModel.renderer.WindowRenderMap;
 
 public class TestFields {
 	@Test
@@ -46,7 +45,5 @@ public class TestFields {
 		Assert.assertEquals(3, map.getCell(7, 5).properties.bazarAccess);
 		Assert.assertEquals(2, map.getCell(8, 5).properties.bazarAccess);
 
-//		WindowRenderMap wrm = new WindowRenderMap(map);
-//		wrm.join();
 	}
 }

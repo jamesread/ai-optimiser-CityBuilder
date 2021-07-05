@@ -13,8 +13,6 @@ import cityBuilderModel.buildings.House.HouseLevel;
 import cityBuilderModel.buildings.PoliceStation;
 import cityBuilderModel.buildings.Temple;
 import cityBuilderModel.buildings.WaterCarrier;
-import cityBuilderModel.renderer.MapRenderer;
-import cityBuilderModel.renderer.WindowRenderMap;
 
 public class AnalyiserTest {
 	@Test
@@ -31,11 +29,6 @@ public class AnalyiserTest {
 		map.addBuilding(8, 8, new Courthouse());
 
 		Analyser.analyse(map);
-
-		WindowRenderMap wnd = new WindowRenderMap(map);
-		MapRenderer renderer = wnd.getRenderer();
-		renderer.shouldPaintBuildingLabels = true;
-		renderer.shouldFakeIsomorphic = false;
 
 		Assert.assertEquals(8, map.getCell(1, 1).properties.templeInfluence);
 		Assert.assertEquals(5, map.getCell(4, 4).properties.templeInfluence);
