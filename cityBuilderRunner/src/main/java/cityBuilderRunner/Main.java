@@ -4,14 +4,15 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 
 import cityBuilderModel.Map;
-import cityBuilderModel.renderer.WindowRenderMap;
+import cityBuilderViewer.renderer.WindowRenderMap;
+import cityBuilderGa.Args;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 
 public class Main {
 	private static void displayHelpAndExit() {
-		System.out.println("plga " + Main.getVersion());
+		System.out.println("cbga " + Main.getVersion());
 		System.out.println();
 
 		for (Field f : Args.class.getFields()) {

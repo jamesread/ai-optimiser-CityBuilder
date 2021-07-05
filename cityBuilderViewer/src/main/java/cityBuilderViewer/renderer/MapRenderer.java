@@ -1,4 +1,4 @@
-package cityBuilderModel.renderer;
+package cityBuilderViewer.renderer;
 
 import java.awt.Color;
 import java.awt.Graphics;

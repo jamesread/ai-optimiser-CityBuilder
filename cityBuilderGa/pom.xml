@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cityBuilderGa</groupId>
+	<groupId>cityBuilder</groupId>
 	<artifactId>cityBuilderGa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
@@ -17,46 +17,7 @@
 			</plugin>
 
 
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.2</version>
-				<executions>
-					<execution>
-						<id>default-jar</id>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<finalName>plga</finalName>
-					<appendAssemblyId>false</appendAssemblyId>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef> 
-					</descriptorRefs>
-							<archive>
-								<manifest>  
-									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-									<addClasspath>true</addClasspath>
-									<mainClass>cityBuilderGa.Main</mainClass>
-								</manifest>
-							</archive>
-				</configuration>
-			</plugin>
-		</plugins>
+			</plugins>
 	</build>
 	<dependencies>
 		<dependency>
@@ -80,7 +41,7 @@
 			<version>1.81</version>
 		</dependency>
 		<dependency>
-			<groupId>cityBuilderModel</groupId>
+			<groupId>cityBuilder</groupId>
 			<artifactId>cityBuilderModel</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
