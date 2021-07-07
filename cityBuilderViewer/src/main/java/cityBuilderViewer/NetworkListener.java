@@ -17,12 +17,18 @@ class NetworkListener {
 		try {
 			InetAddress address = InetAddress.getByName("localhost");
 
-			DatagramSocket ds = new DatagramSocket(1337);
+			DatagramSocket ds = new DatagramSocket(1337, address);
 
 			while (true) {			
 				try {
+					if (!ds.isConnected()) {
+						ds.connect(address, 1337);
+						System.out.println("Connected!");
+					}
+
 					DatagramPacket dp = new DatagramPacket(buffer, buffer.length);
 					ds.receive(dp);
+
 					String s = new String(dp.getData(), 0, 0, dp.getLength());
 
 					System.out.println("<<<" + s);
